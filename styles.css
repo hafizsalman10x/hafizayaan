@@ -30,4 +30,176 @@ body {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    filte
+    filter: blur(80px);
+    z-index: -2;
+}
+
+/* ===== MAIN CARD ===== */
+.card {
+    width: 92%;
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 30px 25px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.08);
+    text-align: center;
+    position: relative;
+}
+
+/* Floating animation */
+.luxury-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-ring {
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #d4af37, #fff2b0, #d4af37);
+}
+
+.profile-ring img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Shimmer effect */
+.shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    100% { left: 120%; }
+}
+
+/* ===== TEXT STYLES ===== */
+.gold-text {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #d4af37, #fff2b0, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.trust {
+    font-size: 14px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+/* ===== LIVE VIEW BOX ===== */
+.subscriber-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212,175,55,0.3);
+    padding: 12px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+}
+
+.count {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff2b0;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* ===== BADGES ===== */
+.badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: linear-gradient(45deg, #d4af37, #b8860b);
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn {
+    display: block;
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    padding: 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 25px rgba(37,211,102,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(37,211,102,0.5);
+}
+
+/* ===== FEATURES ===== */
+.features {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.feature {
+    font-size: 13px;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+/* ===== DISCLAIMER ===== */
+.disclaimer {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+}
