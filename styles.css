@@ -1,59 +1,48 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0f0f0f, #000000 70%);
-    color: white;
+    background: #111;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* Background glow */
 .background {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(255,215,0,0.08), transparent 60%);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #333);
     z-index: -2;
 }
 
 .gold-glow {
     position: fixed;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255,215,0,0.15), transparent 70%);
-    filter: blur(80px);
-    top: -100px;
-    right: -100px;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(255,223,0,0.2) 0%, transparent 70%);
     z-index: -1;
 }
 
-/* Glass luxury card */
+/* Card Styles */
 .card {
-    background: rgba(20, 20, 20, 0.85);
-    backdrop-filter: blur(20px);
-    padding: 40px 25px;
+    background: rgba(20, 20, 20, 0.9);
     border-radius: 20px;
-    max-width: 420px;
-    width: 90%;
+    padding: 30px;
+    max-width: 400px;
     text-align: center;
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    animation: floatCard 6s ease-in-out infinite;
+    box-shadow: 0 0 40px rgba(255, 223, 0, 0.3);
 }
 
-@keyframes floatCard {
-    0%,100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+.luxury-float {
+    animation: float 6s ease-in-out infinite;
 }
 
-.gold-text {
-    font-weight: 700;
-    font-size: 24px;
-    background: linear-gradient(90deg, #ffd700, #fff2a8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 /* Profile */
@@ -64,128 +53,149 @@ body {
 }
 
 .profile-ring {
-    padding: 4px;
+    border: 4px solid #FFD700;
     border-radius: 50%;
-    background: linear-gradient(45deg, gold, #fff2a8, gold);
-    animation: shimmer 3s linear infinite;
+    padding: 5px;
+    display: inline-block;
+    animation: shimmer 2s infinite linear;
 }
 
 .profile-ring img {
-    width: 110px;
-    height: 110px;
     border-radius: 50%;
-    display: block;
+    width: 100px;
+    height: 100px;
 }
 
 @keyframes shimmer {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
+    0% { box-shadow: 0 0 10px #FFD700; }
+    50% { box-shadow: 0 0 25px #FFD700; }
+    100% { box-shadow: 0 0 10px #FFD700; }
 }
 
-/* Trust text */
-.trust {
-    font-size: 14px;
-    opacity: 0.85;
-}
-
-/* Live viewers box */
-.subscriber-box {
-    margin: 20px 0;
-    padding: 12px;
-    border-radius: 12px;
-    background: rgba(255, 215, 0, 0.08);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.count {
-    font-size: 28px;
+/* Gold Text */
+.gold-text {
+    color: #FFD700;
     font-weight: 700;
-    color: #ffd700;
+    margin: 10px 0;
 }
 
-.label {
-    font-size: 13px;
-    opacity: 0.8;
+/* Trust */
+.trust {
+    color: #00FF00;
+    margin-bottom: 15px;
+}
+
+/* Subscriber Box */
+.subscriber-box {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+.subscriber-box .count {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #FFD700;
+}
+
+.subscriber-box .label {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
 }
 
 /* Badges */
 .badge-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
     margin: 15px 0;
 }
 
 .badge {
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    background: rgba(255, 215, 0, 0.1);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    display: inline-block;
+    background: #FFD700;
+    color: #111;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.85em;
 }
 
-/* WhatsApp Button */
+/* WhatsApp Button Ultra Luxury Glow */
 .whatsapp-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 20px 0;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: 600;
+    background: linear-gradient(145deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 16px;
-    color: white;
-    background: linear-gradient(45deg, #25D366, #128C7E);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
-    animation: whatsappPulse 2s infinite;
+    padding: 14px 24px;
+    border-radius: 50px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px #25D366, 0 0 30px rgba(37, 211, 102, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
+.whatsapp-btn i {
+    font-size: 1.2em;
+}
+
+/* Hover effect */
 .whatsapp-btn:hover {
-    transform: translateY(-3px) scale(1.03);
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #25D366, 0 0 50px rgba(37, 211, 102, 0.6);
 }
 
-.wa-icon {
-    width: 20px;
-    height: 20px;
-    fill: white;
+/* Ultra Luxury Pulse + Glow */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px #25D366, 0 0 20px rgba(37, 211, 102, 0.5);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 20px #25D366, 0 0 40px rgba(37, 211, 102, 0.7);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 10px #25D366, 0 0 20px rgba(37, 211, 102, 0.5);
+        transform: scale(1);
+    }
 }
 
-/* Pulse animation */
-@keyframes whatsappPulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    50% { box-shadow: 0 0 25px 8px rgba(37, 211, 102, 0.25); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+.pulse {
+    animation: pulseGlow 2s infinite;
 }
 
 /* Features */
 .features {
-    margin-top: 15px;
-    font-size: 14px;
-    opacity: 0.9;
+    text-align: left;
+    margin: 15px 0;
 }
 
 .feature {
-    margin: 6px 0;
+    margin: 5px 0;
 }
 
 /* Disclaimer */
 .disclaimer {
-    font-size: 12px;
-    opacity: 0.6;
-    margin-top: 15px;
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 20px;
 }
 
 /* Footer */
 footer {
+    font-size: 0.75em;
     margin-top: 20px;
-    font-size: 12px;
-    opacity: 0.7;
+    color: #aaa;
 }
 
 footer a {
-    color: #ffd700;
+    color: #25D366;
     text-decoration: none;
 }
