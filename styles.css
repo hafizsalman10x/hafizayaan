@@ -26,7 +26,7 @@ body {
     z-index: -1;
 }
 
-/* Card Styles */
+/* Card */
 .card {
     background: rgba(20, 20, 20, 0.9);
     border-radius: 20px;
@@ -56,7 +56,6 @@ body {
     border: 4px solid #FFD700;
     border-radius: 50%;
     padding: 5px;
-    display: inline-block;
     animation: shimmer 2s infinite linear;
 }
 
@@ -72,7 +71,7 @@ body {
     100% { box-shadow: 0 0 10px #FFD700; }
 }
 
-/* Gold Text */
+/* Gold Heading */
 .gold-text {
     color: #FFD700;
     font-weight: 700;
@@ -81,11 +80,11 @@ body {
 
 /* Trust */
 .trust {
-    color: #00FF00;
+    color: #00FF7F;
     margin-bottom: 15px;
 }
 
-/* Subscriber Box */
+/* Live Viewers Box */
 .subscriber-box {
     background: rgba(255,255,255,0.05);
     border-radius: 15px;
@@ -121,8 +120,8 @@ body {
     font-size: 0.85em;
 }
 
-/* WhatsApp Button Ultra Luxury Glow */
-.whatsapp-btn {
+/* WhatsApp Button (using telegram-btn class from HTML) */
+.telegram-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -137,21 +136,23 @@ body {
     box-shadow: 0 0 15px #25D366, 0 0 30px rgba(37, 211, 102, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    z-index: 1;
     overflow: hidden;
 }
 
-.whatsapp-btn i {
-    font-size: 1.2em;
+/* SVG Icon */
+.tg-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
 }
 
-/* Hover effect */
-.whatsapp-btn:hover {
+/* Hover */
+.telegram-btn:hover {
     transform: scale(1.08);
     box-shadow: 0 0 25px #25D366, 0 0 50px rgba(37, 211, 102, 0.6);
 }
 
-/* Ultra Luxury Pulse + Glow */
+/* Pulse Glow */
 @keyframes pulseGlow {
     0% {
         box-shadow: 0 0 10px #25D366, 0 0 20px rgba(37, 211, 102, 0.5);
@@ -167,7 +168,7 @@ body {
     }
 }
 
-.pulse {
+.telegram-pulse {
     animation: pulseGlow 2s infinite;
 }
 
